@@ -1,7 +1,7 @@
 <h2>Users list</h2>
 
-{{#each titles}}
-<li><a href="/user/update/{{this._id}}">{{this.title}}</a>
+{{#each titlesFromDB}}
+<li><a href="/user/title-details/{{this._id}}">{{this.title}}</a>
   <form action="/user/delete/{{this._id}}" method="post"><button>X</button></form>
 </li>
 {{/each}}

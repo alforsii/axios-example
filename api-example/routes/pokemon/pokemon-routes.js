@@ -6,7 +6,7 @@ const Poke = require('../../models/Pokemon.model');
 
 router.get('/', (req, res, next) => {
   axios
-    .get(`${pokeApiUrl}?limit=1000`)
+    .get(`${pokeApiUrl}?limit=100`)
     .then(allPokemon => {
       // console.log('Output for: allPokemon', allPokemon.data);
       res.render('pokemon/pokemon-lists', {
